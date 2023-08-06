@@ -31,8 +31,5 @@ public class BancoView {
     public ContaCorrentePF consultaConta(@PathParam("name") String name) {
         return bancoController.consultaConta(name);
     }
-
-
-
 }
 

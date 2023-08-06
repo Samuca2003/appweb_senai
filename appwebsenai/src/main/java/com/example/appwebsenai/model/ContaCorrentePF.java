@@ -38,7 +38,6 @@ public class ContaCorrentePF {
     public void setPessoa(Person pessoa) {
         this.pessoa = pessoa;
     }*/
-
     public Double getSaldo() {
         return saldo;
     }

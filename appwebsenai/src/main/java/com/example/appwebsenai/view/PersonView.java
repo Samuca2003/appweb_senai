@@ -10,7 +10,6 @@ public class PersonView {
 
     @Autowired
     Controller controller;
-
     @GetMapping("/person")
     public Person findPerson(@PathParam("name") String name) {
         return controller.findPerson(name);
