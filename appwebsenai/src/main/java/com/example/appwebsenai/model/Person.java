@@ -1,5 +1,4 @@
 package com.example.appwebsenai.model;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
