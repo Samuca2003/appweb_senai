@@ -7,7 +7,6 @@ import javax.persistence.Table;
 
 //@Entity @Table(name = "conta")
 public abstract class Conta {
-
     private Long numeroConta;
 
     //private Person pessoa;

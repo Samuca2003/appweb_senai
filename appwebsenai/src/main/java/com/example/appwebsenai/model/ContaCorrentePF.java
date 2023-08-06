@@ -1,7 +1,6 @@
 package com.example.appwebsenai.model;
 
 import javax.persistence.*;
-
 @Entity
 @Table(name = "conta")
 public class ContaCorrentePF {
