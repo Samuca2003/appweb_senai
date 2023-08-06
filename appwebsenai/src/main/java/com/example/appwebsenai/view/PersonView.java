@@ -1,4 +1,4 @@
-package com.example.appwebsenai.view;
+ package com.example.appwebsenai.view;
 
 import com.example.appwebsenai.controller.Controller;
 import com.example.appwebsenai.model.Person;

@@ -1,4 +1,4 @@
-package com.example.appwebsenai.model;
+ package com.example.appwebsenai.model;
 
  public interface ContaInvestimento {
  }

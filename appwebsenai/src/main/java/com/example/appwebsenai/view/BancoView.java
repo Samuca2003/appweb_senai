@@ -1,4 +1,4 @@
-package com.example.appwebsenai.view;
+ package com.example.appwebsenai.view;
 
 import com.example.appwebsenai.controller.BancoController;
 import com.example.appwebsenai.model.Conta;
