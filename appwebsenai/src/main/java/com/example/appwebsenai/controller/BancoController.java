@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BancoController implements ContaCorrente{
+public class BancoController implements ContaCorrente {
 
     @Autowired
     private BancoRepository bancoRepository;
@@ -18,6 +18,7 @@ public class BancoController implements ContaCorrente{
     private Controller controller;
 
     private Long number = 0L;
+
     @Override
     public Double sacar(Double quantidade, Conta conta) {
         return null;
@@ -27,23 +28,23 @@ public class BancoController implements ContaCorrente{
         ContaCorrentePF contaCorrentePF = new ContaCorrentePF();
         number++;
         contaCorrentePF.setNumeroConta(number);
-        Person person =controller.findPerson(name);
-        if(person != null){
+        Person person = controller.findPerson(name);
+        if (person != null) {
             contaCorrentePF.setPerson(person);
             bancoRepository.save(contaCorrentePF);
-        }else{
+        } else {
             throw new Exception("Pessoa não está cadastrada");
         }
 
         return contaCorrentePF;
     }
 
-    public ContaCorrentePF consultaConta(String name){
+    public ContaCorrentePF consultaConta(String name) {
 
         List<ContaCorrentePF> contas = (List<ContaCorrentePF>) bancoRepository.findAll();
 
-        for(ContaCorrentePF cc : contas){
-            if(cc.getPerson() != null && cc.getPerson().getName().equals(name)){
+        for (ContaCorrentePF cc : contas) {
+            if (cc.getPerson() != null && cc.getPerson().getName().equals(name)) {
                 return cc;
             }
         }
@@ -53,7 +54,7 @@ public class BancoController implements ContaCorrente{
 
     @Override
     public void depositar(Double quantidade, Conta conta) {
-        Double total = conta.getSaldo() + quantidade ;
+        Double total = conta.getSaldo() + quantidade;
         conta.setSaldo(total);
     }
 

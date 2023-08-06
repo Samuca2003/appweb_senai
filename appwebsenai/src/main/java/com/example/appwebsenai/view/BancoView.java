@@ -15,8 +15,9 @@ public class BancoView {
 
     @Autowired
     private BancoController bancoController;
+
     @GetMapping("/consultaSaldo")
-    public Double consultaSaldo(){
+    public Double consultaSaldo() {
         ContaCorrentePF conta = new ContaCorrentePF();
         conta.setSaldo(100D);
         return bancoController.consultaSaldo(conta);
@@ -29,7 +30,7 @@ public class BancoView {
     }
 
     @GetMapping("/consultaconta")
-    public ContaCorrentePF consultaConta(@PathParam("name") String name){
+    public ContaCorrentePF consultaConta(@PathParam("name") String name) {
         return bancoController.consultaConta(name);
     }
 

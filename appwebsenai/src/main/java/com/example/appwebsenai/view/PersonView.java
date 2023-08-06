@@ -14,36 +14,37 @@ public class PersonView {
 
     @Autowired
     Controller controller;
+
     @GetMapping("/person")
-    public Person findPerson(@PathParam("name") String name){
+    public Person findPerson(@PathParam("name") String name) {
         return controller.findPerson(name);
     }
 
 
     @DeleteMapping("/person")
-    public String deletePerson(@PathParam("name") String name){
+    public String deletePerson(@PathParam("name") String name) {
         controller.removePerson(name);
 
         return "Pessoa com o nome de " + name + " foi deletada";
     }
 
     @PostMapping("/person")
-    public Person addPerson(@PathParam("name") String name, @PathParam("sexo") String sexo){
+    public Person addPerson(@PathParam("name") String name, @PathParam("sexo") String sexo) {
         return controller.addPerson(name, sexo);
     }
 
     @PutMapping("/person")
-    public Person updatePerson(@PathParam("name") String name, @PathParam("sexo") String sexo){
+    public Person updatePerson(@PathParam("name") String name, @PathParam("sexo") String sexo) {
         return controller.editPerson(name, sexo);
     }
 
     @GetMapping("/all")
-    public List<Person> listAll(){
+    public List<Person> listAll() {
         return controller.listAll();
     }
 
     @GetMapping("/home")
-    public String helloWorld(){
+    public String helloWorld() {
         return "Hello world";
     }
 }

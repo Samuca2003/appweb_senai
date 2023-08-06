@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "conta")
-public class ContaCorrentePF{
+public class ContaCorrentePF {
 
     @Id
     @Column(name = "numero_conta")
