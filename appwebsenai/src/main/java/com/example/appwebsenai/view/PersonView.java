@@ -7,7 +7,6 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 @RestController
 public class PersonView {
-
     @Autowired
     Controller controller;
     @GetMapping("/person")

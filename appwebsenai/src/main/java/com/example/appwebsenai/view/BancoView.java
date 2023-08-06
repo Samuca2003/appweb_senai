@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.websocket.server.PathParam;
 @RestController
 public class BancoView {
-
     @Autowired
     private BancoController bancoController;
 
