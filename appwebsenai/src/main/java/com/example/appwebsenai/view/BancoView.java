@@ -1,6 +1,6 @@
  package com.example.appwebsenai.view;
 
-import com.example.appwebsenai.controller.BancoController;
+ import com.example.appwebsenai.controller.BancoController;
 import com.example.appwebsenai.model.Conta;
 import com.example.appwebsenai.model.ContaCorrentePF;
 import org.springframework.beans.factory.annotation.Autowired;
