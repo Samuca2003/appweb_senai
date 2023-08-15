@@ -1,7 +1,5 @@
 const formPessoa = document.getElementById("cadastroPessoa");
-const tabelaPessoa = document.getElementById
-("tabelaPessoas").getElementsByTagName('tbody')[0];
-const btnAll = document.getElementById("ListarPessoas")
+
 formPessoa.addEventListener("submit", function (event){
     event.preventDefault();
     let formDados = new FormData(formPessoa);
