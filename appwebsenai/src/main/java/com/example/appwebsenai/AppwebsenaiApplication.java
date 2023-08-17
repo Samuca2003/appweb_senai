@@ -1,4 +1,4 @@
- package com.example.appwebsenai;
+package com.example.appwebsenai;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
