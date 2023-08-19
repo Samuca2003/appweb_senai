@@ -1,5 +1,5 @@
-const formPessoa = document.getElementById("cadastroPessoa");
-const tabelaPessoa = document.getElementById("tabelaPessoas")
+ const formPessoa = document.getElementById("cadastroPessoa");
+ const tabelaPessoa = document.getElementById("tabelaPessoas")
     .getElementsByTagName('tbody')[0];
 const btnAll = document.getElementById("listarPessoas");
 

@@ -1,4 +1,4 @@
-package com.example.appwebsenai.controller;
+ package com.example.appwebsenai.controller;
 
 import com.example.appwebsenai.model.AccountType;
 import com.example.appwebsenai.model.Conta;
