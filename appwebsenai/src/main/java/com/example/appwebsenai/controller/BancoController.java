@@ -1,4 +1,4 @@
- package com.example.appwebsenai.controller;
+package com.example.appwebsenai.controller;
 
 import com.example.appwebsenai.model.AccountType;
 import com.example.appwebsenai.model.Conta;
@@ -7,7 +7,6 @@ import com.example.appwebsenai.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -23,10 +22,6 @@ public class BancoController implements ContaCorrente{
     @Override
     public Double sacar(Double quantidade, Conta conta) {
         return null;
-    }
-
-    public void delete(String name){
-        bancoRepository.delete(this.consultaConta(name));
     }
 
     public ContaCorrentePF criarConta(String name, String accountType) throws Exception {
@@ -61,19 +56,18 @@ public class BancoController implements ContaCorrente{
         return contaCorrentePF;
     }
 
-    public ContaCorrentePF consultaConta(String name){
+    public ContaCorrentePF consultaConta(Long id){
 
-        List<ContaCorrentePF> contas = (List<ContaCorrentePF>) bancoRepository.findAll();
+        ContaCorrentePF cc = bancoRepository.findById(id).get();
 
-        for(ContaCorrentePF cc : contas){
-            if(cc.getPerson() != null && cc.getPerson().getName().equals(name)){
+        if(cc.getAccountType().equals(AccountType.CONTA_POUPANCA)){
+            cc.setSaldo(cc.getSaldo() * 1.01);
+            //bancoRepository.save(cc);
 
-                return cc;
-
-
-            }
         }
-        return null;
+        return cc;
+
+
     }
 
 
@@ -96,6 +90,11 @@ public class BancoController implements ContaCorrente{
             bancoRepository.save(origem);
             message = "A conta do(a) " + destino.getPerson().getName() + " recebeu a transferência no valor de R$ " + valor;
         }else{
+            try{
+
+            } catch (Exception e){
+                e.getStackTrace();
+            }
             message = message + " Saldo insuficiente para a operação";
         }
 

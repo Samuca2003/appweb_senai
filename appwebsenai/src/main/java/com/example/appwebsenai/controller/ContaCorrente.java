@@ -5,7 +5,7 @@ import com.example.appwebsenai.model.ContaCorrentePF;
 
 import javax.websocket.server.PathParam;
 
-public interface ContaCorrente {
+ public interface ContaCorrente {
 
      Double sacar(Double quantidade, Conta conta);
 

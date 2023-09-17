@@ -1,4 +1,5 @@
 package com.example.appwebsenai.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,6 +7,7 @@ import javax.persistence.Table;
 
 //@Entity @Table(name = "conta")
 public abstract class Conta {
+
     private Long numeroConta;
 
     //private Person pessoa;
@@ -35,9 +37,4 @@ public abstract class Conta {
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
-
-
-
-
-
 }
