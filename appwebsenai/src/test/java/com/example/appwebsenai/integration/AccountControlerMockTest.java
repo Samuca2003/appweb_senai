@@ -29,7 +29,7 @@ public class AccountControlerMockTest {
         //MOck é útil para validar que não foi adicionado nada extra no método, pq vai falhar devido a 2 tentativas de execução do método.
         //bancoRepositoryMock.findById(1l);
 
-        ContaCorrentePF conta = bancoController.consultaConta(String.valueOf(1l));
+        ContaCorrentePF conta = bancoController.consultaConta(Long.valueOf(String.valueOf(1l)));
         Assertions.assertEquals(101, conta.getSaldo(), "Método de rentabildade foi afetado");
 
         verify(bancoRepositoryMock, times(1)).findById(1l);
